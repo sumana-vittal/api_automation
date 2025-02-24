@@ -13,8 +13,9 @@ def api_client():
 
 @pytest.fixture(scope="session")
 def load_user_data():
-    # json_file_path = os.path.join(os.path.dirname(__file__),"data","test_data.json")
-    json_file_path = "/Users/raman/PycharmProjects/api_automation/data/test_data.json"
+    json_file_path = os.path.join(os.path.dirname(__file__), "test_data.json")
+    print(json_file_path)
+    # json_file_path = "/Users/raman/PycharmProjects/api_automation/data/test_data.json"
     with open(json_file_path) as json_file:
         data = json.load(json_file)
     return data
